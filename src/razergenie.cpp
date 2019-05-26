@@ -1069,6 +1069,15 @@ void RazerGenie::applyEffectStandardLoc(QString identifier, libopenrazer::Device
         device->setRipple(c, libopenrazer::RIPPLE_REFRESH_RATE); //TODO Configure refreshrate?
     } else if(identifier == "lighting_ripple_random") {
         device->setRippleRandomColor(libopenrazer::RIPPLE_REFRESH_RATE); //TODO Configure refreshrate?
+    } else if(identifier == "lighting_starlight_single") {
+        QColor c = getColorForButton(1, zone);
+        device->setStarlightSingle(c, libopenrazer::STARLIGHT_NORMAL); // TODO Configure speed?
+    } else if(identifier == "lighting_starlight_dual") {
+        QColor c1 = getColorForButton(1, zone);
+        QColor c2 = getColorForButton(2, zone);
+        device->setStarlightDual(c1, c2, libopenrazer::STARLIGHT_NORMAL); // TODO Configure speed?
+    } else if(identifier == "lighting_starlight_random") {
+        device->setStarlightRandom(libopenrazer::STARLIGHT_NORMAL); // TODO Configure speed?
     } else if(identifier == "lighting_static_bw2013") {
         device->setStatic_bw2013();
     } else if(identifier == "lighting_pulsate") {

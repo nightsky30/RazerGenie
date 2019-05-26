@@ -62,6 +62,9 @@ const static QList<RazerCapability> lightingComboBoxCapabilites {
     RazerCapability("lighting_static", "Static", 1),
     RazerCapability("lighting_ripple", "Ripple", 1), // Needs "refresh_rate"
     RazerCapability("lighting_ripple_random", "Ripple random", 0), // Needs "refresh_rate"
+    RazerCapability("lighting_starlight_single", "Starlight Single", 1),
+    RazerCapability("lighting_starlight_dual", "Starlight Dual", 2),
+    RazerCapability("lighting_starlight_random", "Starlight Random", 0),
     RazerCapability("lighting_pulsate", "Pulsate", 0),
     RazerCapability("lighting_static_bw2013", "Static", 0),
 };
